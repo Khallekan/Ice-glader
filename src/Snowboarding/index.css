@@ -70,6 +70,7 @@ h6 {
 .big-h {
     color: #003a55;
     mix-blend-mode: difference;
+    font-size: 3em;
 }
 .info {
     color: white;
