@@ -77,6 +77,12 @@ h6 {
     width: 30%;
     mix-blend-mode: difference;
 }
+button.learn-more {
+    width: 25%;
+    height: 10%;
+    border: none;
+    color: #003a55;
+}
 
 .bottom {
     grid-row: 3/4;
