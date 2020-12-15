@@ -45,6 +45,7 @@ a {
 }
 h4 {
     margin: 0;
+    mix-blend-mode: difference;
 }
 .middle {
     grid-row: 2/3;
