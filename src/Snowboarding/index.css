@@ -1,0 +1,101 @@
+html,
+body {
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url('../../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.big-box {
+    width: 80vw;
+    height: 80vh;
+    background-image: linear-gradient(to right, #003a55 25%, transparent 25%),
+        url('../../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
+    display: table;
+    /* background-image: url('../../images/Ice skating/victor-rodvang-kIavtjR0sZY-unsplash.jpg'); */
+    /* background: url('../../images/Ice skating/victor-rodvang-kIavtjR0sZY-unsplash.jpg')
+            20%,
+        rgb(0, 58, 85) 20%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* .big-box::after {
+    content: '';
+    width: 80vw;
+    height: 80vh;
+    background: linear-gradient(
+        90deg,
+        rgb(0, 58, 85) 20%,
+        rgba(255, 255, 255, 0) 20%
+    );
+    position: absolute;
+    top: -25;
+    left: -25;
+} */
+.big-box {
+    padding-left: 6em;
+    padding-top: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+.top {
+    grid-row: 1 / 2;
+    grid-column: span 1;
+}
+
+.mid {
+    grid-row: 2 / 3;
+    grid-column: span 1;
+}
+.big-h {
+    color: #003a55;
+    mix-blend-mode: difference;
+}
+.info {
+    color: white;
+    mix-blend-mode: difference;
+}
+
+.bottom {
+    grid-row: 3/4;
+    grid-column: span 1;
+}
+.socials {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.icons {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 3px;
+    background-color: white;
+    border-radius: 50%;
+}
+.twit,
+.fb,
+.insta {
+    width: 15px;
+    height: 15px;
+}
