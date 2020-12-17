@@ -59,8 +59,50 @@ h6 {
     grid-template-rows: auto 1fr auto;
 }
 .top {
+    display: flex;
+    flex-direction: row;
     grid-row: 1 / 2;
     grid-column: span 1;
+}
+.top p{
+    width: 80%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: flex-end;
+    padding: 15px;
+
+}
+
+.nav-ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav-ul .show{
+    display: flex;
+}
+
+.hamburger{
+    border: 0;
+    background-color: transparent;
+    color: black;
+    font-size: 20px;
+    display: none;
+}
+
+.hamburger div{
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 5px;
+    color:black
 }
 
 .mid {
@@ -69,7 +111,7 @@ h6 {
 }
 .big-h {
     color: #003a55;
-    mix-blend-mode: difference;
+    /*mix-blend-mode: difference;*/
     font-size: 3em;
 }
 .info {
@@ -77,6 +119,11 @@ h6 {
     width: 30%;
     mix-blend-mode: difference;
 }
+
+span{
+    color: white;
+}
+
 button.learn-more {
     width: 25%;
     height: 10%;
@@ -106,4 +153,80 @@ button.learn-more {
 .insta {
     width: 15px;
     height: 15px;
+}
+
+@media only screen and (max-width: 768px){
+    body{
+        width: 100vw;
+        min-height: 100vh;
+        background-image: url('../../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info {
+        color: white;
+        width: 100%;
+        mix-blend-mode: difference;
+    }
+
+    button.learn-more {
+        width: 100%;
+        height: 50%;
+        border: none;
+        color: #003a55;
+        margin-top: 50px
+    }
+
+    .nav-ul{
+        display: none;
+        width: 100%;
+        flex-direction: column;
+
+    }
+
+    .nav-ul.show{
+        display: flex;
+    }
+
+    .hamburger{
+        display: block;
+    }
+    
+}
+
+@media only screen and (max-width: 380px){
+    .big-box {
+        width: auto;
+        height: auto;
+        background-image: linear-gradient(to right, #003a55 25%, transparent 25%), url(../../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg);
+        display: table;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: -60px;
+    }
+
+    .big-h {
+        color: #003a55;
+        font-size: 30px;
+    }
+
+    .nav-ul{
+        display: none;
+        width: 100%;
+        flex-direction: column;
+
+    }
+
+    .nav-ul.show{
+        display: flex;
+    }
+
+    .hamburger{
+        display: block;
+    }
 }
