@@ -14,6 +14,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Russo+One&display=swap');
 
 h1,
 h2,
@@ -22,6 +23,7 @@ h4,
 h5,
 h6 {
     margin: 0;
+    font-family: 'Russo One', sans-serif;
 }
 
 .big-box {
@@ -60,16 +62,22 @@ h6 {
 }
 .top {
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     grid-row: 1 / 2;
     grid-column: span 1;
 }
 
 .top p {
     width: 50%;
+    font-family: 'Hammersmith One', sans-serif;
+}
+.top p.logo {
+    color: white;
+    /* -webkit-text-stroke: 0.5px #003a55; */
 }
 
 nav {
+    margin-left: auto;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -126,11 +134,15 @@ nav {
 .mid {
     grid-row: 2 / 3;
     grid-column: span 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 .big-h {
     color: #003a55;
     /*mix-blend-mode: difference;*/
     font-size: 3em;
+    -webkit-text-stroke: 0.5px #003a55;
 }
 .info {
     color: white;
@@ -203,16 +215,18 @@ button.learn-more {
     .nav-ul {
         display: none;
         background-color: white;
-        height: 20%;
-        top: 100px;
-        width: 30%;
+        height: fit-content;
+        top: 15%;
+        width: fit-content;
         text-align: center;
-        left: 70%;
+        left: 86.5%;
         position: fixed;
         transform: translateX(120%);
-        flex-direction: column;
+        flex-flow: column wrap;
         transition: 0.4s ease;
         justify-content: space-between;
+        background-color: black;
+        color: white;
     }
 
     .nav-ul.show {
@@ -236,7 +250,7 @@ button.learn-more {
                 #003a55 25%,
                 transparent 25%
             ),
-            url(../../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg);
+            url('../../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
         display: table;
         background-size: cover;
         background-repeat: no-repeat;
@@ -251,10 +265,11 @@ button.learn-more {
     .nav-ul {
         display: none;
         background-color: black;
-        top: 100px;
-        width: 80%;
+        top: 25%;
+        width: fit-content;
+        height: fit-content;
         text-align: center;
-        left: 10%;
+        left: 76%;
         position: fixed;
         transform: translateX(120%);
         flex-direction: column;
