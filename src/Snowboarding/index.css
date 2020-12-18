@@ -69,11 +69,13 @@ h6 {
 
 .top p {
     width: 50%;
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: 'Russo One', sans-serif;
 }
 .top p.logo {
+    font-size: 1.3em;
     color: white;
-    /* -webkit-text-stroke: 0.5px #003a55; */
+    -webkit-text-stroke: 0.5px #003a55;
+    font-weight: bolder;
 }
 
 nav {
@@ -83,6 +85,9 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 15px;
+    box-shadow: -3px 3px 20px gray;
+    border: none;
+    border-radius: 50%;
 }
 
 .nav-ul {
@@ -91,6 +96,8 @@ nav {
     justify-content: center;
     padding: 0;
     text-decoration: none;
+    font-size: 1.3em;
+    font-family: 'Russo One', sans-serif;
 }
 
 .nav-ul {
@@ -107,7 +114,8 @@ nav {
 }
 
 .nav-ul li a {
-    color: lightblue;
+    color: white;
+    -webkit-text-stroke: 0.5px black;
     text-decoration: none;
 }
 
@@ -273,7 +281,6 @@ button.learn-more {
         position: fixed;
         transform: translateX(120%);
         flex-direction: column;
-
         transition: 0.4s ease;
     }
 
