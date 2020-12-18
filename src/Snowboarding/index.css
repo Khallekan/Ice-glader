@@ -74,8 +74,7 @@ h6 {
 .top p.logo {
     font-size: 1.3em;
     color: white;
-    -webkit-text-stroke: 0.5px #003a55;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 nav {
@@ -84,10 +83,9 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 15px;
-    box-shadow: -3px 3px 20px gray;
+    padding: 15px;;
     border: none;
-    border-radius: 50%;
+    
 }
 
 .nav-ul {
@@ -97,7 +95,6 @@ nav {
     padding: 0;
     text-decoration: none;
     font-size: 1.3em;
-    font-family: 'Russo One', sans-serif;
 }
 
 .nav-ul {
@@ -235,6 +232,7 @@ button.learn-more {
         justify-content: space-between;
         background-color: black;
         color: white;
+        height: 150px;
     }
 
     .nav-ul.show {
