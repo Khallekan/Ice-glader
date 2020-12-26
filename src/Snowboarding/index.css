@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
 html,
 body {
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -9,12 +14,11 @@ body {
     background-image: url('../../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    /*overflow: hidden;*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
-@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Russo+One&display=swap');
 
 h1,
 h2,
@@ -23,7 +27,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-family: 'Russo One', sans-serif;
+    font-family: Permanent Marker;
 }
 
 .big-box {
@@ -62,22 +66,20 @@ h6 {
 }
 .top {
     display: flex;
-    flex-flow: row nowrap;
     grid-row: 1 / 2;
     grid-column: span 1;
 }
 
 .top p {
     width: 50%;
-    font-family: 'Russo One', sans-serif;
+    font-family: Monoton;
 }
 .top p.logo {
     font-size: 1.3em;
     color: white;
-    font-weight: bold;
 }
 
-nav {
+/*nav {
     margin-left: auto;
     display: flex;
     align-items: center;
@@ -95,18 +97,53 @@ nav {
     padding: 0;
     text-decoration: none;
     font-size: 1.3em;
+}*/
+
+.hamburger {
+    display: block;
+    height: fit-content;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    margin-top: 20.8px;
+}
+
+.navbar{
+    margin-top: 15px;
+    margin-left: auto;
 }
 
 .nav-ul {
-    display: flex;
-    /*align-items: center;
-    justify-content: center;*/
+    height: 80vh;
+    width: 30vw;
+    background-color:#003a55;
+    position: fixed;
+    top: 10%;
+    left: 60%;
+    opacity: 0.75;
     padding: 0;
     margin: 0;
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(600px);
+    color: #752140;
+    transition: 0.3s ease-in-out;
+    font-family: Courgette;
 }
 
-.nav-ul li {
+.nav-ul.show {
+    transform: translateX(0px);
+}
+
+/*.nav-ul {
+    
+   
+}*/
+
+.nav-ul li { 
     margin: 0 10px;
 }
 
@@ -120,13 +157,13 @@ nav {
     display: flex;
 }
 
-.hamburger {
+/*.hamburger {
     border: 0;
     background-color: transparent;
     color: black;
     font-size: 20px;
     display: none;
-}
+}*/
 
 .hamburger div {
     width: 25px;
@@ -150,9 +187,9 @@ nav {
     -webkit-text-stroke: 0.5px #003a55;
 }
 .info {
-    color: white;
+    color: black;
     width: 30%;
-    mix-blend-mode: difference;
+    font-family: Courgette;
 }
 
 span {
@@ -190,7 +227,18 @@ button.learn-more {
     height: 15px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
+    h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 3rem;
+    margin: 0;
+    font-family: Permanent Marker;
+}
+
     body {
         width: 100vw;
         min-height: 100vh;
@@ -204,9 +252,8 @@ button.learn-more {
     }
 
     .info {
-        color: white;
+        color: black;
         width: 100%;
-        mix-blend-mode: difference;
     }
 
     button.learn-more {
@@ -218,25 +265,27 @@ button.learn-more {
     }
 
     .nav-ul {
-        display: none;
-        background-color: white;
-        height: fit-content;
-        top: 15%;
-        width: fit-content;
-        text-align: center;
-        left: 86.5%;
+        height: 80vh;
+        width: 70vw;
+        background-color:#003a55;
         position: fixed;
-        transform: translateX(120%);
-        flex-flow: column wrap;
-        transition: 0.4s ease;
-        justify-content: space-between;
-        background-color: black;
+        top: 10%;
+        left: 20%;
+        opacity: 0.75;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translateX(500px);
         color: white;
-        height: 150px;
+        z-index: 1;
+        transition: 0.3s ease-in-out;
     }
 
     .nav-ul.show {
-        display: flex;
         transform: translateX(0%);
     }
     .hamburger {
@@ -269,17 +318,24 @@ button.learn-more {
     }
 
     .nav-ul {
-        display: none;
-        background-color: black;
-        top: 25%;
-        width: fit-content;
-        height: fit-content;
-        text-align: center;
-        left: 76%;
+        height: 80vh;
+        width: 70vw;
+        background-color:#003a55;
         position: fixed;
-        transform: translateX(120%);
+        top: 10%;
+        left: 20%;
+        opacity: 0.75;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
         flex-direction: column;
-        transition: 0.4s ease;
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translateX(500px);
+        color: white;
+        z-index: 1;
+        transition: 0.3 ease-in;
     }
 
     .nav-ul.show {
@@ -293,5 +349,6 @@ button.learn-more {
 
     .top p {
         width: 80%;
+        font-family: Monoton;
     }
 }
