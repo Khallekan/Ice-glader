@@ -6,15 +6,9 @@ html,
 body {
     margin: 0;
     padding: 0;
-}
-
-body {
-    width: 100vw;
-    min-height: 100vh;
-    background-image: url('../../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    /*overflow: hidden;*/
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,43 +25,25 @@ h6 {
 }
 
 .big-box {
-    width: 80vw;
-    height: 80vh;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(to right, #003a55 21%, transparent 21%),
         url('../../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
-    display: table;
-    /* background-image: url('../../images/Ice skating/victor-rodvang-kIavtjR0sZY-unsplash.jpg'); */
-    /* background: url('../../images/Ice skating/victor-rodvang-kIavtjR0sZY-unsplash.jpg')
-            20%,
-        rgb(0, 58, 85) 20%; */
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-/* .big-box::after {
-    content: '';
-    width: 80vw;
-    height: 80vh;
-    background: linear-gradient(
-        90deg,
-        rgb(0, 58, 85) 20%,
-        rgba(255, 255, 255, 0) 20%
-    );
-    position: absolute;
-    top: -25;
-    left: -25;
-} */
-.big-box {
     padding-left: 6em;
     padding-top: 0.5em;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
 }
+
 .top {
     display: flex;
     grid-row: 1 / 2;
     grid-column: span 1;
+    align-content: center;
+    justify-content: space-between;
 }
 
 .top p {
@@ -101,25 +77,18 @@ h6 {
 
 .hamburger {
     display: block;
-    height: fit-content;
     background-color: transparent;
     cursor: pointer;
     border: none;
-    margin-top: 20.8px;
 }
 
-.navbar{
-    margin-top: 15px;
-    margin-left: auto;
-}
 
 .nav-ul {
-    height: 80vh;
+    height: 100vh;
     width: 30vw;
     background-color:#003a55;
     position: fixed;
-    top: 10%;
-    left: 60%;
+    left: 67%;
     opacity: 0.75;
     padding: 0;
     margin: 0;
@@ -133,6 +102,7 @@ h6 {
     transition: 0.3s ease-in-out;
     font-family: Courgette;
 }
+
 
 .nav-ul.show {
     transform: translateX(0px);
@@ -149,8 +119,11 @@ h6 {
 
 .nav-ul li a {
     color: white;
-    -webkit-text-stroke: 0.5px black;
     text-decoration: none;
+}
+
+.nav-ul li a:hover {
+    color: pink;
 }
 
 .nav-ul .show {
@@ -228,28 +201,48 @@ button.learn-more {
 }
 
 @media only screen and (max-width: 500px) {
-    h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: 3rem;
+    html,
+body {
     margin: 0;
-    font-family: Permanent Marker;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-    body {
+    
+    .big-box {
         width: 100vw;
         min-height: 100vh;
-        background-image: url('../../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
+        background-image: linear-gradient(to right, #003a55 48%, transparent 0%),
+        url('../../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-position-x: -100px;
+        padding-left: 0px;
+        padding-top: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
     }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 3rem;
+        margin: 0;
+        font-family: Permanent Marker;
+    }
+
 
     .info {
         color: black;
@@ -258,19 +251,19 @@ h6 {
 
     button.learn-more {
         width: 100%;
-        height: 30%;
+        height: 100%;
         border: none;
         color: #003a55;
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     .nav-ul {
-        height: 80vh;
-        width: 70vw;
+        height: 100vh;
+        width: 100vw;
         background-color:#003a55;
         position: fixed;
         top: 10%;
-        left: 20%;
+        left: 0%;
         opacity: 0.75;
         padding: 0;
         margin: 0;
