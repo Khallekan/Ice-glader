@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
 html,
 body {
     margin: 0;
+<<<<<<< HEAD:src/index.css
 }
 
 body {
@@ -9,12 +14,16 @@ body {
     background-image: url('../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+=======
+    padding: 0;
+>>>>>>> bd0f0c6bc1e67ad9c13f77c70e0045df942ceaea:src/Snowboarding/index.css
     overflow: hidden;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Russo+One&display=swap');
 
 h1,
 h2,
@@ -23,71 +32,58 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-family: 'Russo One', sans-serif;
+    font-family: Permanent Marker;
 }
 
 .big-box {
-    width: 80vw;
-    height: 80vh;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(to right, #003a55 21%, transparent 21%),
+<<<<<<< HEAD:src/index.css
         url('../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
     display: table;
     /* background-image: url('../../images/Ice skating/victor-rodvang-kIavtjR0sZY-unsplash.jpg'); */
     /* background: url('../../images/Ice skating/victor-rodvang-kIavtjR0sZY-unsplash.jpg')
             20%,
         rgb(0, 58, 85) 20%; */
+=======
+        url('../../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
+>>>>>>> bd0f0c6bc1e67ad9c13f77c70e0045df942ceaea:src/Snowboarding/index.css
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-/* .big-box::after {
-    content: '';
-    width: 80vw;
-    height: 80vh;
-    background: linear-gradient(
-        90deg,
-        rgb(0, 58, 85) 20%,
-        rgba(255, 255, 255, 0) 20%
-    );
-    position: absolute;
-    top: -25;
-    left: -25;
-} */
-.big-box {
     padding-left: 6em;
     padding-top: 0.5em;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
 }
+
 .top {
     display: flex;
-    flex-flow: row nowrap;
     grid-row: 1 / 2;
     grid-column: span 1;
+    align-content: center;
+    justify-content: space-between;
 }
 
 .top p {
     width: 50%;
-    font-family: 'Russo One', sans-serif;
+    font-family: Monoton;
 }
 .top p.logo {
     font-size: 1.3em;
     color: white;
-    -webkit-text-stroke: 0.5px #003a55;
-    font-weight: bolder;
 }
 
-nav {
+/*nav {
     margin-left: auto;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 15px;
-    box-shadow: -3px 3px 20px gray;
+    padding: 15px;;
     border: none;
-    border-radius: 50%;
+    
 }
 
 .nav-ul {
@@ -97,39 +93,70 @@ nav {
     padding: 0;
     text-decoration: none;
     font-size: 1.3em;
-    font-family: 'Russo One', sans-serif;
+}*/
+
+.hamburger {
+    display: block;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
 }
 
+
 .nav-ul {
-    display: flex;
-    /*align-items: center;
-    justify-content: center;*/
+    height: 100vh;
+    width: 30vw;
+    background-color:#003a55;
+    position: fixed;
+    left: 67%;
+    opacity: 0.75;
     padding: 0;
     margin: 0;
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateX(600px);
+    color: #752140;
+    transition: 0.3s ease-in-out;
+    font-family: Courgette;
 }
 
-.nav-ul li {
+
+.nav-ul.show {
+    transform: translateX(0px);
+}
+
+/*.nav-ul {
+    
+   
+}*/
+
+.nav-ul li { 
     margin: 0 10px;
 }
 
 .nav-ul li a {
     color: white;
-    -webkit-text-stroke: 0.5px black;
     text-decoration: none;
+}
+
+.nav-ul li a:hover {
+    color: pink;
 }
 
 .nav-ul .show {
     display: flex;
 }
 
-.hamburger {
+/*.hamburger {
     border: 0;
     background-color: transparent;
     color: black;
     font-size: 20px;
     display: none;
-}
+}*/
 
 .hamburger div {
     width: 25px;
@@ -153,9 +180,9 @@ nav {
     -webkit-text-stroke: 0.5px #003a55;
 }
 .info {
-    color: white;
+    color: black;
     width: 30%;
-    mix-blend-mode: difference;
+    font-family: Courgette;
 }
 
 span {
@@ -193,52 +220,89 @@ button.learn-more {
     height: 15px;
 }
 
-@media only screen and (max-width: 768px) {
-    body {
+@media only screen and (max-width: 500px) {
+    html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+    .big-box {
         width: 100vw;
         min-height: 100vh;
+<<<<<<< HEAD:src/index.css
         background-image: url('../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
+=======
+        background-image: linear-gradient(to right, #003a55 48%, transparent 0%),
+        url('../../images/Ice skating/emma-paillex-osE_JD9CG6A-unsplash.jpg');
+>>>>>>> bd0f0c6bc1e67ad9c13f77c70e0045df942ceaea:src/Snowboarding/index.css
         background-repeat: no-repeat;
         background-size: cover;
         overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-position-x: -100px;
+        padding-left: 0px;
+        padding-top: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 3rem;
+        margin: 0;
+        font-family: Permanent Marker;
+    }
+
+
     .info {
-        color: white;
+        color: black;
         width: 100%;
-        mix-blend-mode: difference;
     }
 
     button.learn-more {
         width: 100%;
-        height: 50%;
+        height: 100%;
         border: none;
         color: #003a55;
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     .nav-ul {
-        display: none;
-        background-color: white;
-        height: fit-content;
-        top: 15%;
-        width: fit-content;
-        text-align: center;
-        left: 86.5%;
+        height: 100vh;
+        width: 100vw;
+        background-color:#003a55;
         position: fixed;
-        transform: translateX(120%);
-        flex-flow: column wrap;
-        transition: 0.4s ease;
-        justify-content: space-between;
-        background-color: black;
+        top: 10%;
+        left: 0%;
+        opacity: 0.75;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translateX(500px);
         color: white;
+        z-index: 1;
+        transition: 0.3s ease-in-out;
     }
 
     .nav-ul.show {
-        display: flex;
         transform: translateX(0%);
     }
     .hamburger {
@@ -271,17 +335,24 @@ button.learn-more {
     }
 
     .nav-ul {
-        display: none;
-        background-color: black;
-        top: 25%;
-        width: fit-content;
-        height: fit-content;
-        text-align: center;
-        left: 76%;
+        height: 80vh;
+        width: 70vw;
+        background-color:#003a55;
         position: fixed;
-        transform: translateX(120%);
+        top: 10%;
+        left: 20%;
+        opacity: 0.75;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
         flex-direction: column;
-        transition: 0.4s ease;
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translateX(500px);
+        color: white;
+        z-index: 1;
+        transition: 0.3 ease-in;
     }
 
     .nav-ul.show {
@@ -295,5 +366,6 @@ button.learn-more {
 
     .top p {
         width: 80%;
+        font-family: Monoton;
     }
 }
